@@ -359,7 +359,7 @@ a.descubri-tile:hover {
 }
 
 .btn-outline-dark-custom:hover {
-    background-color: var(--negro);
+    background-color: var(--borgona);
     color: var(--blanco);
 }
 
@@ -371,6 +371,7 @@ a.descubri-tile:hover {
 .encontranos h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color: var(--borgona);
 }
 
 .encontranos-grid {
@@ -393,6 +394,7 @@ a.descubri-tile:hover {
     font-family: var(--fuente-titulo);
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    color: var(--borgona);
 }
 
 .redes-lista {
@@ -409,6 +411,28 @@ a.descubri-tile:hover {
 
 .redes-lista a:hover {
     color: var(--borgona);
+}
+
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-family: var(--fuente-titulo);
+}
+
+.formulario-contacto input, .formulario-contacto textarea{
+    margin-bottom: 15px;
+}
+
+.encontranos-contacto{
+
+    font-family: var(--fuente-titulo);
+    font-size: 1.6rem;
+    color: var(--borgona);
+}
+
+.formulario-contacto .btn-outline-dark-custom{
+     border: 1px solid var(--negro);  
 }
 
 .site-footer {

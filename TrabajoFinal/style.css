@@ -1,0 +1,624 @@
+:root {
+    --borgona: #98000f;
+    --blanco: #ffffff;
+    --negro: #1a1414;
+    --crema: #f7f3ef;
+    --borgona-claro: #c4374a;
+    --fuente-titulo: "Baskerville Old Face", "Baskervville", Georgia, serif;
+}
+
+.navbar {
+    background-color: var(--borgona);
+    padding: 1rem 2.5rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blanco);
+    gap: 0.2rem;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+h1,
+h2,
+h3,
+.descubri-tile span {
+    font-family: "Baskerville Old Face", "Baskervville", Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.logo span {
+    font-family: "Baskerville Old Face", "Baskervville", Georgia, serif;
+}
+
+.logo-name {
+    font-size: 1.4rem;
+    letter-spacing: 0.2em;
+}
+
+.logo-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+}
+
+.navbar-nav .nav-link {
+    color: var(--blanco) !important;
+    letter-spacing: 0.06em;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+}
+
+.hero-panel {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: background-size 0.4s ease;
+}
+
+.hero-panel:hover {
+    background-size: 110%;
+}
+
+.hero-mujer {
+    background-image: url(img/Mujer.jpeg);
+    background-color: #990c0c;
+}
+
+.hero-hombre {
+    background-image: url(img/hombre1.png);
+    background-color: #000000;
+}
+
+.hero-content {
+    position: relative;
+}
+
+.hero-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn-outline-light-custom {
+    display: inline-block;
+    border: 1px solid white;
+    color: white;
+    padding: 0.6rem 1.6rem;
+}
+
+.btn-outline-light-custom:hover {
+    background-color: white;
+    color: black;
+}
+
+.descubri {
+    padding: 4rem 2.5rem;
+    background-color: var(--borgona);
+    color: var(--blanco);
+}
+
+.descubri-heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.descubri-heading h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--blanco);
+}
+
+.descubri-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background-color: var(--borgona);
+    border: 4px solid var(--blanco);
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.descubri-tile {
+    background-color: var(--blanco);
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--borgona);
+    font-family: arial, sans-serif;
+    font-size: 1.8rem;
+    gap: 0.4rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a.descubri-tile:hover {
+    background-color: var(--borgona);
+    color: var(--blanco);
+}
+
+.descubri-tile small {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.nuevo {
+    padding: 4rem 2.5rem 0;
+}
+
+.nuevo-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nuevo-heading h2 {
+    color: var(--borgona);
+    font-size: 2.5rem;
+}
+
+
+.carousel-nuevo {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.producto-slide {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 1rem 5rem;
+}
+
+.producto-img {
+    flex: 0 1 380px;
+}
+
+.producto-img img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top;
+}
+
+.producto-info {
+    flex: 1 1 250px;
+}
+
+.producto-marca {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--borgona);
+}
+
+.producto-info {
+    flex: 1 1 250px;
+}
+
+.producto-info h3 {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+.producto-precio {
+    font-weight: 600;
+}
+
+.btn-consultar {
+    display: inline-block;
+    background-color: var(--borgona);
+    color: var(--blanco);
+    padding: 0.65rem 1.4rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-consultar:hover {
+    background-color: var(--negro);
+    color: var(--blanco)
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    background-color: var(--negro);
+    border-radius: 80%;
+    padding: 0.8rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4rem;
+}
+
+.moda-limites {
+    background-color: var(--borgona);
+    color: var(--blanco);
+    display: flex;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.moda-limites-overlay {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.moda-limites h2 {
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.moda-frase {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.moda-texto {
+    color: var(--blanco);
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.marcas {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.marcas h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--borgona);
+    font-weight: bold;
+}
+
+.marcas-lista {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 60vh;
+    background-color: var(--crema);
+}
+
+.sobre-img {
+    position: relative;
+}
+
+.sobre-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sobre-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+}
+
+.sobre-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-texto p {
+    max-width: 40ch;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-texto .btn-outline-dark-custom {
+    align-self: flex-start;
+    display: inline-block;
+    border: 1px solid var(--negro);
+    color: var(--negro);
+    padding: 0.6rem 1.6rem;
+}
+
+.btn-outline-dark-custom:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.encontranos {
+    padding: 4.5rem 2.5rem;
+    text-align: center;
+}
+
+.encontranos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.encontranos-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.encontranos-mapa {
+    width: 100%;
+    height: 320px;
+    border: 0;
+}
+
+.encontranos-nombre {
+    font-family: var(--fuente-titulo);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.redes-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2.5rem;
+    color: var(--negro);
+}
+
+.redes-lista a {
+    transition: color 0.2s ease;
+}
+
+.redes-lista a:hover {
+    color: var(--borgona);
+}
+
+.site-footer {
+    background-color: var(--borgona);
+    color: var(--blanco);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.faq {
+    padding: 4rem 2.5rem;
+    text-align: center;
+    background-color: var(--crema);
+}
+
+.faq .accordion {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq h2{
+    color: var(--borgona);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--crema);
+    color: var(--borgona);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 2px var(--borgona);
+}
+
+.footer-marca {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.footer-slogan {
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-nav a {
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--negro);
+}
+
+.footer-ubicacion {
+    opacity: 0.8;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-linea {
+    height: 2px;
+    background-color: var(--blanco);
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+/*=======CSS CATEGORIAS=====*/
+
+.hero-categoria {
+    min-height: 35vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-categoria-mujer{
+    background-image: url(img/hero-mujer.jpeg);
+}
+
+.hero-categoria-hombre{
+    background-image: url(img/Hombre.jpeg);
+}
+
+.hero-categoria-calzado{
+    background-image: url(img/hero-calzado.JPG);
+}
+
+.hero-categoria-accesorios{
+    background-image: url(img/hero-accesorios.JPG);
+}
+
+.producto-card .card-img-top {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.calzado-card .card-img-top{
+    aspect-ratio: 4/3;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.producto-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.producto-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.producto-card .btn-consultar {
+    margin-top: auto;
+}
+
+.footer-redes {
+    justify-content: center;
+}
+
+.footer-redes a:hover {
+    color: var(--blanco);
+}
+
+.talles-lista {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.talle {
+    display: inline-block;
+    border: 1px solid var(--negro);
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.talle:hover {
+    border-color: var(--borgona);
+}
+
+
+
+
+@media (min-width: 992px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        justify-content: center;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .descubri-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-img {
+        min-height: 260px;
+    }
+
+    .sobre-texto {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .encontranos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}

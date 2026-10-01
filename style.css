@@ -343,6 +343,7 @@ a.descubri-tile:hover {
 .sobre-texto h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--borgona);
 }
 
 .sobre-texto p {
@@ -413,26 +414,27 @@ a.descubri-tile:hover {
     color: var(--borgona);
 }
 
-.formulario-contacto{
+.formulario-contacto {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
     font-family: var(--fuente-titulo);
 }
 
-.formulario-contacto input, .formulario-contacto textarea{
+.formulario-contacto input,
+.formulario-contacto textarea {
     margin-bottom: 15px;
 }
 
-.encontranos-contacto{
+.encontranos-contacto {
 
     font-family: var(--fuente-titulo);
     font-size: 1.6rem;
     color: var(--borgona);
 }
 
-.formulario-contacto .btn-outline-dark-custom{
-     border: 1px solid var(--negro);  
+.formulario-contacto .btn-outline-dark-custom {
+    border: 1px solid var(--negro);
 }
 
 .site-footer {
@@ -454,7 +456,7 @@ a.descubri-tile:hover {
     text-align: left;
 }
 
-.faq h2{
+.faq h2 {
     color: var(--borgona);
 }
 
@@ -521,19 +523,19 @@ a.descubri-tile:hover {
     justify-content: center;
 }
 
-.hero-categoria-mujer{
+.hero-categoria-mujer {
     background-image: url(img/hero-mujer.jpeg);
 }
 
-.hero-categoria-hombre{
+.hero-categoria-hombre {
     background-image: url(img/Hombre.jpeg);
 }
 
-.hero-categoria-calzado{
+.hero-categoria-calzado {
     background-image: url(img/hero-calzado.JPG);
 }
 
-.hero-categoria-accesorios{
+.hero-categoria-accesorios {
     background-image: url(img/hero-accesorios.JPG);
 }
 
@@ -542,7 +544,7 @@ a.descubri-tile:hover {
     object-fit: cover;
 }
 
-.calzado-card .card-img-top{
+.calzado-card .card-img-top {
     aspect-ratio: 4/3;
 }
 
@@ -624,7 +626,21 @@ a.descubri-tile:hover {
 @media (max-width: 767px) {
 
     .descubri-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .descubri-tile {
+        min-height: 160px;
+        font-size: 1.3rem;
+    }
+
+    .descubri-tile small {
+        font-size: 0.75rem;
+    }
+
+    .descubri-tile-accesorios {
+        font-size: 0.9rem;
+        line-height: 1.2;
     }
 
     .sobre {
@@ -641,6 +657,11 @@ a.descubri-tile:hover {
 
     .encontranos-grid {
         grid-template-columns: 1fr;
+    }
+
+    .encontranos h2 {
+        font-size: 2rem;
+        text-align: center;
     }
 
     .productos-grid {

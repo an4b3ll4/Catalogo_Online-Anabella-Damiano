@@ -583,6 +583,7 @@ a.descubri-tile:hover {
     display: flex;
     gap: 0.4rem;
     margin-bottom: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .talle {
@@ -644,5 +645,11 @@ a.descubri-tile:hover {
 
     .productos-grid {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .producto-card h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+        min-height: 2.6em;
     }
 }

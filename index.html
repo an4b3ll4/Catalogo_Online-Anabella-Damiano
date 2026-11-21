@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Monina Rafaela - Moda Sin Limites</title>
 </head>
 
@@ -193,22 +194,28 @@
                                 aria-label="Facebook de Monina">Facebook</a>
                         </li>
                         <li>
-                            <a href="https://wa.me/5493492315341" target="_blank" rel="noopener"
+                            <a href="https://wa.me/5493492641904" target="_blank" rel="noopener"
                                 aria-label="WhatsApp de Monina">WhatsApp</a>
                         </li>
                     </ul>
 
                     <h5 class="encontranos-contacto">Consultas y pedidos</h5>
 
-                    <form action="mailto:mmoninarafaela@gmail.com" class="formulario-contacto">
-
+                    <form id="form-contacto" class="formulario-contacto" novalidate>
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="text" id="nombre" name="nombre">
+                        <p class="error-campo" id="error-nombre"></p>
+ 
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                        <p class="error-campo" id="error-telefono"></p>
+
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                        <button type="submit" class="btn btn-outline-dark-custom">Enviar</button>
+                        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                        <p class="error-campo" id="error-mensaje"></p>
+
+                        <button type="submit" class="btn btn-outline-dark-custom">Enviar por WhatsApp</button>
+                        <p id="contacto-exito" class="oculto exito"></p>
                     </form>
                 </div>
             </div>

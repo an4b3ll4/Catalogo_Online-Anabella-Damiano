@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Hombre - Monina Rafaela</title>
 </head>
 
@@ -39,97 +40,14 @@
             </div>
         </section>
 
-        <div class="productos-grid">
-            <div class="card producto-card">
-                <img src="img/bermudaBaggy.jpg" alt="Bermuda Baggy" class="card-img-top">
-                <div class="card-body">
-                    <p class="producto-marca">Atrapame Demin</p>
-                    <h3>Bermuda Baggy</h3>
-                    <p class="producto-precio">$XX.XXX</p>
-                    <div class="talles-lista">
-                        <span class="talle">38 al 44</span>
-                        
-                    </div>
-                    <a href="https://wa.me/5493492315341?text=Hola!%20Quiero%20consultar%20por%20la%20Bermuda%20Baggy"
-                        class="btn btn-consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-                </div>
-            </div>
+         <section class="herramientas">
+        <input type="search" id="buscador" placeholder="Buscar producto o marca..." aria-label="Buscar producto">
+        <button type="button" id="btn-ofertas" class="btn-filtro">Solo ofertas</button>
+        <p id="cotizacion-dolar" class="cotizacion"></p>
+    </section>
 
-            <div class="card producto-card">
-                <img src="img/impulseHombre.jpeg" alt="Remera Impulse" class="card-img-top">
-                <div class="card-body">
-                    <p class="producto-marca">Corpofit</p>
-                    <h3>Remera Impulse</h3>
-                    <p class="producto-precio">$XX.XXX</p>
-                    <div class="talles-lista">
-                        <span class="talle">S</span>
-                        <span class="talle">M</span>
-                        <span class="talle">L</span>
-                        <span class="talle">XL</span>
-                    </div>
-                    <a href="https://wa.me/5493492315341?text=Hola!%20Quiero%20consultar%20por%20la%20Remera%20Impulse"
-                        class="btn btn-consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card producto-card">
-                <img src="img/bermudaCargo.jpg" alt="Bermuda Cargo" class="card-img-top">
-                <div class="card-body">
-                    <p class="producto-marca">Roby</p>
-                    <h3>Bermuda Cargo</h3>
-                    <p class="producto-precio">$XX.XXX</p>
-                    <div class="talles-lista">
-                        <span class="talle">42</span>
-                    </div>
-                    <a href="https://wa.me/5493492315341?text=Hola!%20Quiero%20consultar%20por%20el%20Bermuda%20Cargo"
-                        class="btn btn-consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-                </div>
-            </div>
-
-             <div class="card producto-card">
-                <img src="img/chombaBeige.jpg" alt="Chomba Beige Vivos Verdes" class="card-img-top">
-                <div class="card-body">
-                    <p class="producto-marca">Roby</p>
-                    <h3>Chomba Beige con Vivos Verdes</h3>
-                    <p class="producto-precio">$XX.XXX</p>
-                    <div class="talles-lista">
-                        <span class="talle">L</span>
-                    </div>
-                    <a href="https://wa.me/5493492315341?text=Hola!%20Quiero%20consultar%20por%20la%20Chomba%20Beige"
-                        class="btn btn-consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-                </div>
-            </div>
-
-             <div class="card producto-card">
-                <img src="img/chombaRoja.jpg" alt="Chomba Roja" class="card-img-top">
-                <div class="card-body">
-                    <p class="producto-marca">Roby</p>
-                    <h3>Chomba Roja con Vivos Blancos</h3>
-                    <p class="producto-precio">$XX.XXX</p>
-                    <div class="talles-lista">
-                        <span class="talle">L</span>
-                    </div>
-                    <a href="https://wa.me/5493492315341?text=Hola!%20Quiero%20consultar%20por%20la%20Chomba%20Roja"
-                        class="btn btn-consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-                </div>
-            </div>
-
-             <div class="card producto-card">
-                <img src="img/PantalonBuzo.png" alt="Pantalon de Buzo rustico" class="card-img-top">
-                <div class="card-body">
-                    <p class="producto-marca">Sport</p>
-                    <h3>Pantalon de buzo rustico</h3>
-                    <p class="producto-precio">$XX.XXX</p>
-                    <div class="talles-lista">
-                        <span class="talle">XL</span>
-                    </div>
-                    <a href="https://wa.me/5493492315341?text=Hola!%20Quiero%20consultar%20por%20el%20Pantalon%20de%20Buzo"
-                        class="btn btn-consultar" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-                </div>
-            </div>
-
-
-        </div>
+    <div class="productos-grid" id="productos" data-categoria="hombre"></div>
+    <p id="sin-resultados" class="oculto sin-resultados">No encontramos productos con esa búsqueda.</p>
 
 
     </main>

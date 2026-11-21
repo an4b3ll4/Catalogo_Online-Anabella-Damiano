@@ -27,14 +27,14 @@ const productos = [
     { id: "bermuda-baggy", categoria: "hombre", marca: "Atrapame Denim", nombre: "Bermuda Baggy", precio: 30000, precioAnterior: null, etiqueta: "", promo: "", oferta: false, talles: ["38 al 44"], imagen: "img/bermudaBaggy.jpg" },
     { id: "remera-impulse-hombre", categoria: "hombre", marca: "Corpofit", nombre: "Remera Impulse", precio: 18000, precioAnterior: null, etiqueta: "Nuevo", promo: "", oferta: false, talles: ["S", "M", "L", "XL"], imagen: "img/impulseHombre.jpeg" },
     { id: "bermuda-cargo", categoria: "hombre", marca: "Roby", nombre: "Bermuda Cargo", precio: 28000, precioAnterior: null, etiqueta: "Último par", promo: "", oferta: false, talles: ["42"], imagen: "img/bermudaCargo.jpg" },
-    { id: "chomba-beige", categoria: "hombre", marca: "Roby", nombre: "Chomba Beige con Vivos Verdes", precio: 22000, precioAnterior: null, etiqueta: "2x1", promo: "Llevando las 2 chombas Roby", oferta: true, talles: ["L"], imagen: "img/chombaBeige.jpg" },
-    { id: "chomba-roja", categoria: "hombre", marca: "Roby", nombre: "Chomba Roja con Vivos Blancos", precio: 22000, precioAnterior: null, etiqueta: "2x1", promo: "Llevando las 2 chombas Roby", oferta: true, talles: ["L"], imagen: "img/chombaRoja.jpg" },
+    { id: "chomba-beige", categoria: "hombre", marca: "Roby", nombre: "Chomba Beige con Vivos Verdes", precio: 22000, precioAnterior: null, etiqueta: "2x1", promo: "Llevando las 2, pagás c/u: ", oferta: true, talles: ["L"], imagen: "img/chombaBeige.jpg" },
+    { id: "chomba-roja", categoria: "hombre", marca: "Roby", nombre: "Chomba Roja con Vivos Blancos", precio: 22000, precioAnterior: null, etiqueta: "2x1", promo: "Llevando las 2, pagás c/u:", oferta: true, talles: ["L"], imagen: "img/chombaRoja.jpg" },
     { id: "pantalon-buzo", categoria: "hombre", marca: "Sport", nombre: "Pantalón de buzo rústico", precio: 20000, precioAnterior: null, etiqueta: "", promo: "", oferta: false, talles: ["XL"], imagen: "img/PantalonBuzo.png" },
 
     // ----- CALZADO -----
-    { id: "kappa-kombat", categoria: "calzado", marca: "Kappa", nombre: "Zapatillas Kappa Kombat", precio: 55000, precioAnterior: null, etiqueta: "Último par", promo: "", oferta: false, talles: ["40"], imagen: "img/kappaKombat.jpg" },
-    { id: "diadora-running", categoria: "calzado", marca: "Diadora", nombre: "Zapatilla Running Diadora", precio: 60000, precioAnterior: 75000, etiqueta: "Último par", promo: "", oferta: true, talles: ["42"], imagen: "img/ZapasDiadora.jpg" },
-    { id: "fila-running", categoria: "calzado", marca: "Fila", nombre: "Zapatillas Running Fila", precio: 58000, precioAnterior: null, etiqueta: "Último par", promo: "", oferta: false, talles: ["39"], imagen: "img/zapasFila.jpg" },
+    { id: "kappa-kombat", categoria: "calzado", marca: "Kappa", nombre: "Zapatillas Kappa Kombat", precio: 44000, precioAnterior: 55000, etiqueta: "-20%", promo: "Último par, talle 40", oferta: true, talles: ["40"], imagen: "img/kappaKombat.jpg" },
+    { id: "diadora-running", categoria: "calzado", marca: "Diadora", nombre: "Zapatilla Running Diadora", precio: 60000, precioAnterior: 75000, etiqueta: "-20%", promo: "Último par, talle 42", oferta: true, talles: ["42"], imagen: "img/ZapasDiadora.jpg" },
+    { id: "fila-running", categoria: "calzado", marca: "Fila", nombre: "Zapatillas Running Fila", precio: 46400, precioAnterior: 58000, etiqueta: "-20%", promo: "Último par, talle 39", oferta: true, talles: ["39"], imagen: "img/zapasFila.jpg" },
     { id: "lecoq-urban", categoria: "calzado", marca: "Le Coq", nombre: "Zapatillas Urban", precio: 62000, precioAnterior: null, etiqueta: "Último par", promo: "", oferta: false, talles: ["44"], imagen: "img/lecoq.jpg" },
     { id: "joma-running", categoria: "calzado", marca: "Joma", nombre: "Zapatillas Running Joma", precio: 57000, precioAnterior: null, etiqueta: "Último par", promo: "", oferta: false, talles: ["43"], imagen: "img/ZapasJoma.jpg" },
     { id: "botin-penalty", categoria: "calzado", marca: "Penalty", nombre: "Botines Campo Penalty", precio: 50000, precioAnterior: null, etiqueta: "Último par", promo: "", oferta: false, talles: ["41"], imagen: "img/BotinPenalty.jpg" },
@@ -365,9 +365,25 @@ function iniciarFormulario() {
         });
     });
 }
+// ---------- OFERTAS EN LA PÁGINA DE INICIO ----------
 
+function iniciarOfertasInicio() {
+    const contenedor = document.getElementById("ofertas-home");
+    if (!contenedor) {
+        return; // esta página no tiene la sección de ofertas
+    }
+
+    const ofertas = productos.filter(function (producto) {
+        return producto.oferta;
+    });
+
+    ofertas.forEach(function (producto) {
+        contenedor.appendChild(crearTarjeta(producto));
+    });
+}
 
 // ---------- 7. ARRANQUE ----------
 
 iniciarCatalogo();
 iniciarFormulario();
+iniciarOfertasInicio();

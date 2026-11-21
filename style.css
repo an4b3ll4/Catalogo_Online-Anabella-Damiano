@@ -169,6 +169,7 @@ a.descubri-tile:hover {
 
 .nuevo {
     padding: 4rem 2.5rem 0;
+    background-color: var(--crema);
 }
 
 .nuevo-heading {
@@ -685,6 +686,14 @@ a.descubri-tile:hover {
 }
 
 .exito { color: #2e7d32; font-weight: 600; }
+
+.ofertas {
+    padding: 4rem 2.5rem 0;
+}
+
+.ofertas .productos-grid {
+    padding-top: 0;
+}
 
 
 @media (min-width: 992px) {

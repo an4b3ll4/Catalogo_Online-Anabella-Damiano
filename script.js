@@ -1,9 +1,3 @@
-// ============================================================
-// Monina Rafaela - script.js
-// Un solo archivo para todas las páginas. Cada parte revisa si
-// existen los elementos que necesita, así no falla en otras páginas.
-// ============================================================
-
 // ---------- 1. DATOS ----------
 
 const NUMERO_WHATSAPP = "5493492315341";
@@ -116,7 +110,7 @@ function crearBotonConsultar(producto) {
     return boton;
 }
 
-// Construye una tarjeta con la misma estructura que tenía el HTML original
+// Construye una tarjeta con la misma estructura que tenía en el HTML original
 function crearTarjeta(producto) {
     const tarjeta = crearElemento("div", "card producto-card");
     if (producto.categoria === "calzado") {
@@ -138,7 +132,7 @@ function crearTarjeta(producto) {
     cuerpo.appendChild(crearElemento("h3", "", producto.nombre));
     cuerpo.appendChild(crearPrecio(producto));
 
-    // Precio aproximado en dólares (solo si ya llegó la cotización)
+    // Precio aproximado en dólares
     if (cotizacionDolar) {
         const enDolares = (producto.precio / cotizacionDolar).toLocaleString("es-AR", {
             minimumFractionDigits: 2,
@@ -279,7 +273,7 @@ function validarFormulario() {
     }
 
     // /^[0-9]+$/ significa: el texto tiene solo dígitos, de principio a fin
-    if (!/^[0-9]+$/.test(telefono)) {
+    if (telefono === "" || isNaN(telefono) || telefono.includes(".")) {
         mostrarError("telefono", "El teléfono debe tener solo números.");
         esValido = false;
     } else if (telefono.length < 8) {

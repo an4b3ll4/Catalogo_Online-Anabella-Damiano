@@ -4,7 +4,7 @@ const NUMERO_WHATSAPP = "5493492315341";
 const URL_DOLAR = "https://dolarapi.com/v1/dolares/oficial";
 const CLAVE_BORRADOR = "monina-borrador-contacto";
 
-// PRECIOS DE PRUEBA: cambiarlos por los reales cuando estén.
+// PRECIOS DE PRUEBA: cuando tenga los reales, los cambiaré.
 // oferta: true  -> aparece al tocar "Solo ofertas"
 // precioAnterior -> si existe, se muestra tachado
 // etiqueta / promo -> textos opcionales ("" si no hay)
@@ -272,7 +272,7 @@ function validarFormulario() {
         esValido = false;
     }
 
-    // /^[0-9]+$/ significa: el texto tiene solo dígitos, de principio a fin
+     // isNaN da true si el texto no es un número (por ejemplo, si tiene letras o guiones)
     if (telefono === "" || isNaN(telefono) || telefono.includes(".")) {
         mostrarError("telefono", "El teléfono debe tener solo números.");
         esValido = false;
